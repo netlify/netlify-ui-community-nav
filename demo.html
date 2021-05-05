@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<title></title>
+		<style>
+		body {
+			margin: 0;
+		}
+		</style>
+		<link rel="stylesheet" href="nav.css">
+	</head>
+	<body>
+		<netlify-ui-community-nav class="ncn">
+			<header class="ncn-header">
+				<a href="https://www.netlify.com/" class="ncn-home">
+					<img class="ncn-home-logo" src="assets/logo.svg" alt="Netlify logo">
+					<span class="ncn-visual-hidden">Home</span>
+				</a>
+				<details class="ncn-menu" data-details-animate data-close-click-outside data-close-esc>
+					<summary><div class="ncn-menu-hed">Remotely Interesting</div></summary>
+					<nav class="ncn-menu-c" data-close-click-outside-curtain>
+						<a href="https://www.netlify.com/community/" class="ncn-menulink ncn-menulink-community">Community</a>
+						<a href="https://answers.netlify.com/" class="ncn-menulink ncn-menulink-forums">Support Forums</a>
+						<a href="https://explorers.netlify.com/" class="ncn-menulink ncn-menulink-explorers">Learning Platform</a>
+						<a href="https://remotelyinteresting.transistor.fm/" class="ncn-menulink ncn-menulink-podcast">Podcast</a>
+						<a href="https://swag.netlify.com/" class="ncn-menulink ncn-menulink-swag">Swag</a>
+					</nav>
+				</details>
+				<details class="ncn-submenu" open data-details-animate data-close-click-outside="(max-width: 63.1875em)" data-force-state data-force-state-closed="(max-width: 63.1875em)" data-close-esc="(max-width: 63.1875em)">
+					<summary>
+						<div class="ncn-submenu-hed">
+							<svg width="31" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="ncn-hamb" aria-hidden="true" focusable="false">
+								<rect x="0.581177" y="0.71875" width="30" height="4" fill="#ffffff"/>
+								<rect x="0.581177" y="10.7188" width="30" height="4" fill="#ffffff"/>
+								<rect x="0.581177" y="20.7188" width="30" height="4" fill="#ffffff"/>
+							</svg>
+							<span class="ncn-visual-hidden">Menu</span>
+						</div>
+					</summary>
+					<nav class="ncn-submenu-c" data-close-click-outside-curtain>
+						<a href="" class="ncn-submenulink">Home</a>
+						<a href="" class="ncn-submenulink">About</a>
+						<a href="" class="ncn-submenulink">Episodes</a>
+						<a href="" class="ncn-submenulink">Subscribe</a>
+					</nav>
+				</details>
+			</header>
+		</netlify-ui-community-nav>
+
+		<script defer src="lib/details-animate.js"></script>
+		<script defer src="lib/details-force-state.js"></script>
+		<script defer src="nav.js"></script>
+	</body>
+</html>

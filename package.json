@@ -1,0 +1,16 @@
+{
+  "name": "netlify-ui-community-nav",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+	"private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "datauri": "^3.0.0",
+    "glyphhanger": "^4.0.1"
+  }
+}

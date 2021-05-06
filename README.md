@@ -8,6 +8,7 @@ A web component for shared navigation on Community, Forums, Answers, Podcasts, S
 
 ## TODO
 
-1. Figure out final URLs for image assets.
-2. Figure out what web fonts to use (designs are old Roboto)
-3. Better JS init for details-*.js utils
+* ~~Sample demo HTML for all instances~~
+* Figure out final URLs for image assets.
+* Figure out what web fonts to use (designs are old Roboto)
+* Better JS init for details-*.js utils

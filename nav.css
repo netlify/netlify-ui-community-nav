@@ -82,7 +82,6 @@
 	.ncn-home {
 		width: 3em; /* 48px /16 */
 		overflow: hidden;
-		clip-path: polygon(0% 0%, 2.5em 0%, 2.5em 100%, 0% 100%);
 	}
 }
 .ncn-home-logo {
@@ -90,6 +89,11 @@
 	height: auto;
 	padding-left: var(--ncn-pad-h);
 	padding-right: var(--ncn-pad-h);
+}
+@media (max-width: 22.4375em) { /* 359px */
+	.ncn-home-logo {
+		clip-path: polygon(0% 0%, 2.5em 0%, 2.5em 100%, 0% 100%);
+	}
 }
 @media (min-width: 26.25em) { /* 420px /16 */
 	.ncn-home-logo {

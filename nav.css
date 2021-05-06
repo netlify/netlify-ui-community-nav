@@ -20,15 +20,16 @@
 	}
 }
 @font-face {
-	font-family: ncn-roboto-bold;
-	/* TODO convert to Data URI */
+	font-family: ncn-roboto;
+	/* TODO optimize */
 	src: url(assets/Roboto-Bold.ttf) format("opentype");
 	font-weight: 700;
 	font-display: swap;
 }
 .ncn {
 	font-size: 16px; /* Reset for varied root font sizes */
-	font-family: ncn-roboto-bold, fantasy; /* TODO switch to sans-serif */
+	/* TODO double check this font-family */
+	font-family: ncn-roboto, system-ui, sans-serif;
 	color: var(--ncn-color-white);
 }
 .ncn a[href] {
@@ -75,6 +76,7 @@
 }
 .ncn-home-logo {
 	height: 1.5625em; /* 25px /16 */
+	width: auto;
 	padding: var(--ncn-menu-pad-v) calc(.5 * var(--ncn-menu-pad-h)) var(--ncn-menu-pad-v) var(--ncn-pad-h);
 }
 .ncn-menu {
@@ -132,7 +134,7 @@
 	background-repeat: no-repeat;
 	background-image: url(assets/arrow.svg);
 }
-.ncn-menu[open] > .ncn-menu-hed:after {
+.ncn-menu[open] .ncn-menu-hed:after {
 	transform: rotate(180deg);
 }
 

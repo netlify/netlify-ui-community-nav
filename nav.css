@@ -12,6 +12,7 @@
 	--ncn-color-navy: #0c1a36;
 	--ncn-color-white: #fff;
 
+	--ncn-weight: 600;
 	--ncn-shadow: -10px 10px 80px rgba(0, 0, 0, .1);
 }
 @media (min-width: 40em) { /* 640px */
@@ -21,18 +22,10 @@
 		--ncn-menulink-pad-v: 1.375em; /* 22px /16 */
 	}
 }
-@font-face {
-	font-family: ncn-roboto;
-	/* TODO optimize */
-	src: url(assets/Roboto-Bold.ttf) format("opentype");
-	font-weight: 700;
-	font-display: swap;
-}
 .ncn {
 	display: flex;
 	font-size: 16px; /* Reset for varied root font sizes */
-	/* TODO double check this font-family */
-	font-family: ncn-roboto, system-ui, sans-serif;
+	font-family: Pacaembu, Roboto, system-ui, sans-serif;
 	color: var(--ncn-color-white);
 	min-height: var(--ncn-min-h);
 }
@@ -60,7 +53,7 @@
 }
 .ncn summary {
 	list-style: none;
-	font-weight: 700;
+	font-weight: var(--ncn-weight);
 }
 .ncn summary::-webkit-details-marker {
 	display: none;
@@ -272,7 +265,7 @@
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
 	background-size: 100% 100%, var(--ncn-menu-bgsize) auto;
-	font-weight: 700;
+	font-weight: var(--ncn-weight);
 }
 .ncn-menulink:focus,
 .ncn-menulink:hover {
@@ -304,7 +297,7 @@
 	display: flex;
 	align-items: center;
 	background-color: var(--ncn-color-blue);
-	font-weight: 700;
+	font-weight: var(--ncn-weight);
 }
 @media (min-width: 63.25em) { /* 1012px */
 	.ncn-submenulink {

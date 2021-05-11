@@ -172,13 +172,16 @@
 	top: 100%;
 	left: 0;
 	width: 100%;
-	overflow: hidden;
+	overflow: auto;
 	height: calc(100vh - 100%);
 	z-index: 1;
+	-webkit-overflow-scrolling: touch;
+	-ms-scroll-chaining: none;
+	overscroll-behavior: contain;
 }
-.ncn-menu:not(.details-animating) .ncn-menu-c,
-.ncn-submenu:not(.details-animating) .ncn-submenu-c {
-	overflow: auto;
+.ncn-menu.details-animating .ncn-menu-c,
+.ncn-submenu.details-animating .ncn-submenu-c {
+	overflow: hidden;
 }
 .ncn-ctm .ncn-menu-c:before,
 .ncn-ctm .ncn-submenu-c:before {

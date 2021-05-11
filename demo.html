@@ -15,6 +15,9 @@
 		}
 		</style>
 		<link rel="stylesheet" href="nav.css">
+		<script>
+		document.documentElement.classList.add("ncn-ctm");
+		</script>
 	</head>
 	<body>
 		<netlify-ui-community-nav class="ncn">
@@ -23,7 +26,10 @@
 					<img class="ncn-home-logo" src="assets/logo.svg" alt="Netlify logo" width="147" height="40" loading="eager">
 					<span class="ncn-visual-hidden">Home</span>
 				</a>
-				<details class="ncn-menu" data-details-animate data-close-click-outside data-close-esc>
+				<details class="ncn-menu"
+					data-close-click-outside
+					data-close-esc
+					data-modal="(max-width: 39.9375em)">
 					<summary><div class="ncn-menu-hed">Remotely Interesting</div></summary>
 					<nav class="ncn-menu-c" data-close-click-outside-curtain>
 						<a href="https://www.netlify.com/community/" class="ncn-menulink ncn-menulink-community">Community</a>
@@ -33,7 +39,11 @@
 						<a href="https://swag.netlify.com/" class="ncn-menulink ncn-menulink-swag">Swag</a>
 					</nav>
 				</details>
-				<details class="ncn-submenu" open data-details-animate data-close-click-outside="(max-width: 63.1875em)" data-force-state data-force-state-closed="(max-width: 63.1875em)" data-close-esc="(max-width: 63.1875em)">
+				<details class="ncn-submenu"
+					data-close-click-outside="(max-width: 63.1875em)"
+					data-force-state-closed="(max-width: 63.1875em)"
+					data-close-esc="(max-width: 63.1875em)"
+					data-modal="(max-width: 39.9375em)">
 					<summary class="ncn-submenu-summary">
 						<div class="ncn-submenu-hed">
 							<svg width="31" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="ncn-hamb" aria-hidden="true" focusable="false">
@@ -54,7 +64,7 @@
 			</header>
 		</netlify-ui-community-nav>
 
-		<h2>Answers</h2>
+		<!--<h2>Answers</h2>
 		<netlify-ui-community-nav class="ncn">
 			<header class="ncn-header">
 				<a href="https://www.netlify.com/" class="ncn-home">
@@ -72,9 +82,9 @@
 					</nav>
 				</details>
 			</header>
-		</netlify-ui-community-nav>
+		</netlify-ui-community-nav>-->
 
-		<h2>Swag</h2>
+		<!--<h2>Swag</h2>
 		<netlify-ui-community-nav class="ncn">
 			<header class="ncn-header">
 				<a href="https://www.netlify.com/" class="ncn-home">
@@ -92,7 +102,7 @@
 					</nav>
 				</details>
 			</header>
-		</netlify-ui-community-nav>
+		</netlify-ui-community-nav>-->
 
 		<!--<h2>Testing with arbtrary content before and after</h2>
 		<netlify-ui-community-nav class="ncn">
@@ -112,9 +122,29 @@
 			</header>
 		</netlify-ui-community-nav>-->
 
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
+		<p>Content</p>
 
-		<script defer src="lib/details-animate.js"></script>
-		<script defer src="lib/details-force-state.js"></script>
 		<script defer src="nav.js"></script>
 	</body>
 </html>

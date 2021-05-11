@@ -149,7 +149,7 @@
 	height: 8px;
 	transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 	background-repeat: no-repeat;
-	background-image: url(assets/arrow.svg);
+	background-image: url(https://netlify-ui-community-nav.netlify.app/assets/arrow.svg);
 }
 .ncn-menu[open] .ncn-menu-hed:after {
 	transform: rotate(180deg);
@@ -273,21 +273,21 @@
 }
 /* TODO make these asset URLs better */
 .ncn-menulink-community {
-	--ncn-menu-img: url(assets/community.jpg);
+	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/community.jpg);
 }
 .ncn-menulink-swag {
-	--ncn-menu-img: url(assets/swag.jpg);
+	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/swag.jpg);
 }
 .ncn-menulink-forums {
-	--ncn-menu-img: url(assets/answers.jpg);
+	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/answers.jpg);
 	--ncn-menu-bgsize: 100%;
 }
 .ncn-menulink-explorers {
-	--ncn-menu-img: url(assets/explorers.jpg);
+	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/explorers.jpg);
 	--ncn-menu-bgsize: 80%;
 }
 .ncn-menulink-podcast {
-	--ncn-menu-img: url(assets/podcast.jpg);
+	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/podcast.jpg);
 	--ncn-menu-bgsize: 80%;
 }
 

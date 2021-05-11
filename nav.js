@@ -39,7 +39,9 @@ class ForceState {
 		let modalMm = this.getModalMediaQuery();
 		if(modalMm) {
 			modalMm.addListener(e => {
-				this.setModal(e.matches);
+				if(this.detail.open) {
+					this.setModal(e.matches);
+				}
 			});
 		}
 

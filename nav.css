@@ -55,7 +55,7 @@
 	list-style: none;
 	font-weight: var(--ncn-weight);
 }
-.ncn summary::-webkit-details-marker {
+.ncn summary::marker {
 	display: none;
 }
 

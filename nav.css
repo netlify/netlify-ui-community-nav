@@ -307,12 +307,26 @@
 
 /* Hamburger animates to close icon */
 /* clean-css ignore:start */
+.ncn-hamb {
+	width: 31px;
+	height: 25px;
+}
 .ncn-hamb rect {
+	fill: var(--ncn-color-white);
+	width: 30px;
+	height: 4px;
+	x: 0px;
 	rx: 2px;
   transition: all .15s;
 }
+.ncn-hamb rect:nth-child(2) {
+	y: 10px;
+}
+.ncn-hamb rect:nth-child(3) {
+	y: 20px;
+}
 .ncn-submenu[open] .ncn-hamb rect {
-  x: 0;
+  x: 0px;
   y: 10.35px;
 }
 /* clean-css ignore:end */

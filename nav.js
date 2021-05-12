@@ -1,5 +1,5 @@
 // Better if this is in <head>
-// document.documentElement.classList.add("ncn-ctm");
+document.documentElement.classList.add("ncn-ctm");
 
 function getMatchMedia(el, mq) {
 	if(!el) return;

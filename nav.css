@@ -66,6 +66,9 @@
 .ncn summary::marker {
 	display: none;
 }
+.ncn summary::-webkit-details-marker {
+	display: none;
+}
 
 
 .ncn-header {

@@ -1,6 +1,6 @@
 {
   "name": "@netlify/community-nav",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "nav.js",
   "private": true,

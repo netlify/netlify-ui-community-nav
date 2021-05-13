@@ -1,12 +1,10 @@
 /* Netlify Community Nav, v1.0 */
 
-// Better if this is in <head>
-document.documentElement.classList.add("ncn-ctm");
-
 function getMatchMedia(el, mq) {
 	if(!el) return;
 
-	if(mq && "matchMedia" in window) {
+	// when the attribute value is empty, React casts to "true" string
+	if(mq && mq !== "true" && "matchMedia" in window) {
 		return window.matchMedia(mq);
 	}
 }
@@ -222,17 +220,32 @@ class AnimateDetails {
 }
 
 class CommunityNav extends HTMLElement {
+	constructor() {
+		super();
+		this._connect();
+	}
+
 	connectedCallback() {
+		this._connect();
+	}
+
+	_connect() {
 		if (this.children.length) {
 			this._init();
 			return;
 		}
 
+		// not yet available, watch it for init
 		this._observer = new MutationObserver(this._init.bind(this));
 		this._observer.observe(this, { childList: true });
 	}
 
 	_init() {
+		if(this.initialized) {
+			return;
+		}
+		this.initialized = true;
+
 		let details = Array.from(this.querySelectorAll(`:scope details`));
 		for(let detail of details) {
 			// override initial state based on viewport (if needed)
@@ -277,13 +290,13 @@ class CommunityNav extends HTMLElement {
 		document.documentElement.addEventListener("mousedown", event => {
 			for(let detail of details) {
 				let fs = new ForceState(detail);
-
 				let mm = fs.getClickoutToCloseMatchMedia();
 				if(mm && !mm.matches) {
 					// don’t close if has a media query but it doesn’t match current viewport size
 					// useful for viewport navigation that must stay open (e.g. list of horizontal links)
 					continue;
 				}
+
 				let isCurtainElement = event.target.hasAttribute(fs.attr.closeClickOutsideCurtain);
 				if((isCurtainElement || !this.isChildOfParent(event.target, detail)) && detail.open) {
 					fs.triggerClickToClose(detail);
@@ -294,5 +307,8 @@ class CommunityNav extends HTMLElement {
 }
 
 if("customElements" in window) {
+	// Better if this is in <head>
+	document.documentElement.classList.add("ncn-ctm");
+
 	window.customElements.define("netlify-ui-community-nav", CommunityNav);
 }

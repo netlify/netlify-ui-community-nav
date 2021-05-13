@@ -220,6 +220,7 @@ class AnimateDetails {
 }
 
 
+// Nest usage of `HTMLElement` global inside of this check (compat with Gatsby SSR)
 if(typeof window !== "undefined" && ("customElements" in window)) {
 
 	class CommunityNav extends HTMLElement {

@@ -13,6 +13,7 @@
 	--ncn-color-navy: #0c1a36;
 	--ncn-color-white: #fff;
 
+	--ncn-zindex: 10;
 	--ncn-maxwidth: 70em; /* 1120px /16 */
 	--ncn-weight: 600;
 	--ncn-shadow: -10px 10px 80px rgba(0, 0, 0, .1);
@@ -182,7 +183,7 @@
 	width: 100%;
 	overflow: auto;
 	height: calc(100vh - 100%);
-	z-index: 1;
+	z-index: var(--ncn-zindex);
 	-webkit-overflow-scrolling: touch;
 	-ms-scroll-chaining: none;
 	overscroll-behavior: contain;
@@ -233,7 +234,7 @@
 .ncn-submenu-summary {
 	position: absolute;
 	right: 0;
-	z-index: 2;
+	z-index: var(--ncn-zindex);
 	height: 100%;
 }
 .ncn-submenu-hed {

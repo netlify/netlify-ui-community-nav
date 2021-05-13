@@ -14,3 +14,10 @@ The reason we embed markup inline inside of the web component here is for both p
 
 3. (Optional, performance) Add to `<head>`: `<link rel="preconnect" href="https://netlify-ui-community-nav.netlify.app/">`
 4. (Optional, performance) Add to `<head>`: `<script>document.documentElement.classList.add("ncn-ctm");</script>`
+
+## Release
+
+1. Update `version` in package.json
+2. Update Version comment in `nav.js`, `nav.css`
+3. Update `version` HTML attribute in `demo.html`
+4. Commit, tag, push.

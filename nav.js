@@ -1,3 +1,5 @@
+/* Netlify Community Nav, v1.0.0 */
+
 // Better if this is in <head>
 document.documentElement.classList.add("ncn-ctm");
 

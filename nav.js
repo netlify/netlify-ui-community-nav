@@ -219,94 +219,96 @@ class AnimateDetails {
 	}
 }
 
-class CommunityNav extends HTMLElement {
-	constructor() {
-		super();
-		this._connect();
-	}
 
-	connectedCallback() {
-		this._connect();
-	}
+if(typeof window !== "undefined" && ("customElements" in window)) {
 
-	_connect() {
-		if (this.children.length) {
-			this._init();
-			return;
+	class CommunityNav extends HTMLElement {
+		constructor() {
+			super();
+			this._connect();
 		}
 
-		// not yet available, watch it for init
-		this._observer = new MutationObserver(this._init.bind(this));
-		this._observer.observe(this, { childList: true });
-	}
-
-	_init() {
-		if(this.initialized) {
-			return;
-		}
-		this.initialized = true;
-
-		let details = Array.from(this.querySelectorAll(`:scope details`));
-		for(let detail of details) {
-			// override initial state based on viewport (if needed)
-			let fs = new ForceState(detail);
-			fs.init();
-
-			// animate the menus
-			new AnimateDetails(detail);
+		connectedCallback() {
+			this._connect();
 		}
 
-		this.bindCloseOnEsc(details);
-		this.bindClickoutToClose(details);
-	}
+		_connect() {
+			if (this.children.length) {
+				this._init();
+				return;
+			}
 
-	bindCloseOnEsc(details) {
-		document.documentElement.addEventListener("keydown", event => {
+			// not yet available, watch it for init
+			this._observer = new MutationObserver(this._init.bind(this));
+			this._observer.observe(this, { childList: true });
+		}
+
+		_init() {
+			if(this.initialized) {
+				return;
+			}
+			this.initialized = true;
+
+			let details = Array.from(this.querySelectorAll(`:scope details`));
 			for(let detail of details) {
+				// override initial state based on viewport (if needed)
 				let fs = new ForceState(detail);
-				if (fs.isCloseOnEsc() && event.keyCode === 27 && detail.open) {
-					let mm = fs.getCloseOnEscMatchMedia();
-					if(!mm) {
-						fs.setState(false);
-					} else if(mm) {
-						fs.setState(!mm.matches);
+				fs.init();
+
+				// animate the menus
+				new AnimateDetails(detail);
+			}
+
+			this.bindCloseOnEsc(details);
+			this.bindClickoutToClose(details);
+		}
+
+		bindCloseOnEsc(details) {
+			document.documentElement.addEventListener("keydown", event => {
+				for(let detail of details) {
+					let fs = new ForceState(detail);
+					if (fs.isCloseOnEsc() && event.keyCode === 27 && detail.open) {
+						let mm = fs.getCloseOnEscMatchMedia();
+						if(!mm) {
+							fs.setState(false);
+						} else if(mm) {
+							fs.setState(!mm.matches);
+						}
 					}
 				}
-			}
-		}, false);
-	}
-
-	isChildOfParent(target, parent) {
-		while(target && target.parentNode) {
-			if(target.parentNode === parent) {
-				return true;
-			}
-			target = target.parentNode;
+			}, false);
 		}
-		return false;
-	}
 
-	bindClickoutToClose(details) {
-		document.documentElement.addEventListener("mousedown", event => {
-			for(let detail of details) {
-				let fs = new ForceState(detail);
-				let mm = fs.getClickoutToCloseMatchMedia();
-				if(mm && !mm.matches) {
-					// don’t close if has a media query but it doesn’t match current viewport size
-					// useful for viewport navigation that must stay open (e.g. list of horizontal links)
-					continue;
+		isChildOfParent(target, parent) {
+			while(target && target.parentNode) {
+				if(target.parentNode === parent) {
+					return true;
 				}
-
-				let isCurtainElement = event.target.hasAttribute(fs.attr.closeClickOutsideCurtain);
-				if((isCurtainElement || !this.isChildOfParent(event.target, detail)) && detail.open) {
-					fs.triggerClickToClose(detail);
-				}
+				target = target.parentNode;
 			}
-		}, false);
-	}
-}
+			return false;
+		}
 
-if("customElements" in window) {
+		bindClickoutToClose(details) {
+			document.documentElement.addEventListener("mousedown", event => {
+				for(let detail of details) {
+					let fs = new ForceState(detail);
+					let mm = fs.getClickoutToCloseMatchMedia();
+					if(mm && !mm.matches) {
+						// don’t close if has a media query but it doesn’t match current viewport size
+						// useful for viewport navigation that must stay open (e.g. list of horizontal links)
+						continue;
+					}
+
+					let isCurtainElement = event.target.hasAttribute(fs.attr.closeClickOutsideCurtain);
+					if((isCurtainElement || !this.isChildOfParent(event.target, detail)) && detail.open) {
+						fs.triggerClickToClose(detail);
+					}
+				}
+			}, false);
+		}
+	}
+
 	// Better if this is in <head>
 	document.documentElement.classList.add("ncn-ctm");
 

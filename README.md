@@ -7,13 +7,14 @@ A web component for shared navigation on Community, Forums, Answers, Podcasts, S
 
 ## Usage
 
-1. Add `nav.js` and `nav.css` to your site’s bundler.
-2. Copy markup for the property (find the `<netlify-ui-community-nav>` in `demo.html`) and add to the top of the page (update the “Customize” sections)
+1. Install `npm install github:netlify/netlify-ui-community-nav#v1.0.4`
+2. Add `nav.js` and `nav.css` to your site’s bundler.
+3. Copy markup for the property (find the `<netlify-ui-community-nav>` in `demo.html`) and add to the top of the page (update the “Customize” sections)
 
 The reason we embed markup inline inside of the web component here is for both progressive enhancement and performance reasons. The hamburger icon is also embedded inline to animate the transition when opened.
 
-3. (Optional, performance) Add to `<head>`: `<link rel="preconnect" href="https://netlify-ui-community-nav.netlify.app/">`
-4. (Optional, performance) Add to `<head>`: `<script>document.documentElement.classList.add("ncn-ctm");</script>`
+4. (Optional, performance) Add to `<head>`: `<link rel="preconnect" href="https://netlify-ui-community-nav.netlify.app/">`
+5. (Optional, performance) Add to `<head>`: `<script>document.documentElement.classList.add("ncn-ctm");</script>`
 
 ## Release
 

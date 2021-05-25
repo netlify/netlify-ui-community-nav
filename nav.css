@@ -223,6 +223,9 @@
 	.ncn-submenu-c:before {
 		display: none;
 	}
+	.ncn-submenu-c {
+		border-radius: 0;
+	}
 }
 
 /* Submenu (menu to the right on larger viewport) */

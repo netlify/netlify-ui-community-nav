@@ -30,6 +30,7 @@
 	justify-content: center;
 	font-size: 16px; /* Reset for varied root font sizes */
 	font-family: Pacaembu, Roboto, system-ui, sans-serif;
+	font-feature-settings: "salt" 1;
 	color: var(--ncn-color-white);
 	min-height: var(--ncn-min-h);
 	background-color: var(--ncn-color-blue);

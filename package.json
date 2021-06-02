@@ -1,13 +1,20 @@
 {
-  "name": "@netlify/community-nav",
-  "version": "1.0.5",
-  "description": "",
-  "main": "nav.js",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@netlify/marketing-community-nav",
+  "version": "1.0.6",
+  "description": "A web component for shared navigation on Community, Forums, Answers, Podcasts, Swag, and others.",
+  "dependencies": {},
+  "scripts": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netlify/netlify-ui-community-nav.git"
   },
   "keywords": [],
-  "author": "",
-  "devDependencies": {}
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/netlify/netlify-ui-community-nav/issues"
+  },
+  "homepage": "https://github.com/netlify/netlify-ui-community-nav#readme"
 }

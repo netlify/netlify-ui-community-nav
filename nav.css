@@ -143,7 +143,6 @@
 	pointer-events: none;
 }
 /* Exclude border from variant without logo */
-.ncn-menu ~
 @media (max-width: 26.1875em) { /* 419px */
 	.ncn-menu-hed:before {
 		left: -0.625em; /* -10px /16 */

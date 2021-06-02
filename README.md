@@ -7,7 +7,7 @@ A web component for shared navigation on Community, Forums, Answers, Podcasts, S
 
 ## Usage
 
-1. Install `npm install github:netlify/netlify-ui-community-nav#v1.0.4`
+1. Install `npm install @netlify/marketing-community-nav`
 2. Add `nav.js` and `nav.css` to your site’s bundler.
 3. Copy markup for the property (find the `<netlify-ui-community-nav>` in `demo.html`) and add to the top of the page (update the “Customize” sections)
 

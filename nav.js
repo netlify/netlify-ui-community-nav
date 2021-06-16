@@ -46,11 +46,16 @@ class ForceState {
 		}
 
 		this.summary.addEventListener("click", e => {
-			if(modalMm && modalMm.matches) {
+			if(this.isModal()) {
 				// TODO does this value work without animate too?
 				this.setModal(!this.detail.open);
 			}
 		});
+	}
+
+	isModal() {
+		let mm = this.getModalMediaQuery();
+		return mm && mm.matches;
 	}
 
 	isCloseOnEsc() {

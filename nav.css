@@ -45,6 +45,7 @@
 .ncn a[href]:focus,
 .ncn a[href]:hover {
 	background-color: var(--ncn-color-navy);
+	text-decoration: underline;
 }
 .ncn img,
 .ncn svg {
@@ -228,6 +229,30 @@
 	}
 }
 
+@media (max-width: 63.1875em) { /* 1011px */
+	.ncn-menu summary a[href] {
+		pointer-events: none;
+	}
+}
+@media (hover: hover) and (min-width: 63.25em) { /* 1012px */
+	.ncn-menu .ncn-menu-c {
+		display: none;
+	}
+	.ncn-menu summary a[href] {
+		cursor: pointer;
+	}
+	.ncn-menu summary:focus ~ .ncn-menu-c,
+	.ncn-menu:hover .ncn-menu-c {
+		display: block;
+	}
+	.ncn-menu:focus-within .ncn-menu-c {
+		display: block;
+	}
+	.ncn-menu[open] .ncn-menu-hed:after {
+		transform: none;
+	}
+}
+
 /* Submenu (menu to the right on larger viewport) */
 .ncn-submenu {
 	display: flex;
@@ -281,7 +306,7 @@
 	padding: var(--ncn-menulink-pad-v) var(--ncn-menu-pad-h);
 	border-top: 1px solid var(--ncn-color-navy);
 	background-color: var(--ncn-color-blue);
-	background-image: linear-gradient(to right, var(--ncn-menu-gradient), transparent), var(--ncn-menu-img);
+	background-image: linear-gradient(to right, var(--ncn-menu-gradient), transparent);
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
 	background-size: 100% 100%, var(--ncn-menu-bgsize) auto;
@@ -290,6 +315,7 @@
 .ncn-menulink:focus,
 .ncn-menulink:hover {
 	--ncn-menu-gradient: var(--ncn-color-navy) 50%;
+	background-image: linear-gradient(to right, var(--ncn-menu-gradient), transparent), var(--ncn-menu-img);
 }
 /* TODO make these asset URLs better */
 .ncn-menulink-community {

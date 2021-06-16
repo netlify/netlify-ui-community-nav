@@ -21,7 +21,7 @@
 @media (min-width: 40em) { /* 640px */
 	:root {
 		--ncn-min-h: 4.25em; /* 68px /16 */
-		--ncn-pad-h: 1.9375em; /* 31px /16 */
+		--ncn-pad-h: 1.625em; /* 26px /16 */
 		--ncn-menulink-pad-v: 1.375em; /* 22px /16 */
 	}
 }
@@ -145,9 +145,7 @@
 }
 /* Exclude border from variant without logo */
 @media (max-width: 26.1875em) { /* 419px */
-	.ncn-menu-hed:before {
-		left: -0.625em; /* -10px /16 */
-	}
+
 }
 @media (min-width: 40em) { /* 640px */
 	.ncn-menu-hed:before {

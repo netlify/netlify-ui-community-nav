@@ -1,4 +1,4 @@
-/* Netlify Community Nav, v1.0.8 */
+/* Netlify Community Nav, v1.0.9 */
 
 function getMatchMedia(el, mq) {
 	if(!el) return;

@@ -19,8 +19,8 @@ The reason we embed markup inline inside of the web component here is for both p
 ## Release
 
 1. Update `version` in package.json
-2. (If HTML changed) Update Version comment in `nav.js`, `nav.css`
-3. (If HTML changed) Update `version` HTML attribute in `demo.html`
+2. Update Version comment in `nav.js`, `nav.css`
+3. Update `version` HTML attribute in `demo.html`
 4. Convert HTML to JSX, if needed
 	* Translate any `class` attributes to `className`. Leave `class` on root `<netlify-ui-community-nav>` element as is.
 	* Other attributes with a `-` will also need to be translated to camelCase: e.g. `stop-color` to `stopColor`, `fill-rule` to `fillRule`.

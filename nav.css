@@ -17,6 +17,12 @@
 	--ncn-maxwidth: 70em; /* 1120px /16 */
 	--ncn-weight: 600;
 	--ncn-shadow: -10px 10px 80px rgba(0, 0, 0, .1);
+
+	--ncn-menu-img-community: url(https://netlify-ui-community-nav.netlify.app/assets/community.jpg);
+	--ncn-menu-img-swag: url(https://netlify-ui-community-nav.netlify.app/assets/swag.jpg);
+	--ncn-menu-img-forums: url(https://netlify-ui-community-nav.netlify.app/assets/answers.jpg);
+	--ncn-menu-img-podcast: url(https://netlify-ui-community-nav.netlify.app/assets/podcast.jpg);
+	--ncn-menu-img-explorers: url(https://netlify-ui-community-nav.netlify.app/assets/explorers.jpg);
 }
 @media (min-width: 40em) { /* 640px */
 	:root {
@@ -191,6 +197,7 @@
 .ncn-submenu.details-animating .ncn-submenu-c {
 	overflow: hidden;
 }
+/* Curtain */
 .ncn-ctm .ncn-menu-c:before,
 .ncn-ctm .ncn-submenu-c:before {
 	content: "";
@@ -304,7 +311,6 @@
 	padding: var(--ncn-menulink-pad-v) var(--ncn-menu-pad-h);
 	border-top: 1px solid var(--ncn-color-navy);
 	background-color: var(--ncn-color-blue);
-	background-image: linear-gradient(to right, var(--ncn-menu-gradient), transparent);
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
 	background-size: 100% 100%, var(--ncn-menu-bgsize) auto;
@@ -315,23 +321,32 @@
 	--ncn-menu-gradient: var(--ncn-color-navy) 50%;
 	background-image: linear-gradient(to right, var(--ncn-menu-gradient), transparent), var(--ncn-menu-img);
 }
-/* TODO make these asset URLs better */
+.ncn-ctm .ncn-menu-c:after {
+	content: "";
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	background-image: var(--ncn-menu-img-community), var(--ncn-menu-img-swag), var(--ncn-menu-img-forums), var(--ncn-menu-img-explorers), var(--ncn-menu-img-podcast);
+}
 .ncn-menulink-community {
-	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/community.jpg);
+	--ncn-menu-img: var(--ncn-menu-img-community);
 }
 .ncn-menulink-swag {
-	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/swag.jpg);
+	--ncn-menu-img: var(--ncn-menu-img-swag);
 }
 .ncn-menulink-forums {
-	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/answers.jpg);
+	--ncn-menu-img: var(--ncn-menu-img-forums);
 	--ncn-menu-bgsize: 100%;
 }
 .ncn-menulink-explorers {
-	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/explorers.jpg);
+	--ncn-menu-img: var(--ncn-menu-img-explorers);
 	--ncn-menu-bgsize: 80%;
 }
 .ncn-menulink-podcast {
-	--ncn-menu-img: url(https://netlify-ui-community-nav.netlify.app/assets/podcast.jpg);
+	--ncn-menu-img: var(--ncn-menu-img-podcast);
 	--ncn-menu-bgsize: 80%;
 }
 

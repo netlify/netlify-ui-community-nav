@@ -1,4 +1,4 @@
-/* Netlify Community Nav Forums/Discourse specific code */
+/* Netlify Community Nav Forums/Discourse specific code for common/common.scss */
 .ncn {
 	--ncn-zindex: 2000; /* override .d-header-wrap 1000 */
 }
@@ -26,7 +26,7 @@ details[open] > .ncn-submenu-c.ncn-submenu-c {
 	.ncn .ncn-home,
 	.ncn .ncn-menu {
 			position: relative;
-			z-index: 1;
+			z-index: var(--ncn-zindex); /* override .d-header-wrap 1000 */
 	}
 }
 
@@ -42,26 +42,22 @@ details[open] > .ncn-submenu-c.ncn-submenu-c {
 	display: none;
 }
 .ncn ~ #main .d-header-wrap {
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-@media (min-width: 40em) { /* 640px */
-	.ncn ~ #main,
-	.ncn ~ #main .d-header-wrap {
-			position: static;
-	}
+	background-color: var(--ncn-color-blue);
 }
 
 /* Blue Login buttons on small screen */
-@media (max-width: 37.4375em) { /* 599px */
+@media (max-width: 39.9375em) { /* 639px */
 	.ncn ~ #main {
-		padding-top: 2em;
+		padding-top: 0;
 	}
 	.ncn ~ #main .d-header {
 		background-color: transparent;
-		height: calc(2em + 2 * var(--ncn-menulink-pad-v));
-		margin-top: calc(-1.5em - 2 * var(--ncn-menulink-pad-v));
+		height: 4em;
+		top: 0;
+		width: 50%;
+		right: 0;
+		left: auto;
+		position: absolute;
 	}
 	.ncn ~ #main .d-header > .wrap .contents {
 		height: auto;
@@ -70,8 +66,12 @@ details[open] > .ncn-submenu-c.ncn-submenu-c {
 		margin-top: 0.8125em;
 	}
 	.ncn ~ #main .d-header .panel {
+		display: block;
 		flex-wrap: wrap;
 		flex-direction: column-reverse;
 		align-items: flex-end;
+	}
+	.ncn ~ #main .d-header .panel .menu-panel.slide-in {
+		top: 3.5em !important;
 	}
 }

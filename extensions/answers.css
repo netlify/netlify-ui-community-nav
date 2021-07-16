@@ -1,79 +1,79 @@
 /* Netlify Community Nav Forums/Discourse specific code for common/common.scss */
 .ncn {
-	--ncn-zindex: 2000; /* override .d-header-wrap 1000 */
+  --ncn-zindex: 2000; /* override .d-header-wrap 1000 */
 }
 .ncn details {
-	position: static;
+  position: static;
 }
 .ncn summary::before {
-	display: none;
+  display: none;
 }
 details[open] > .ncn-submenu-c.ncn-submenu-c {
-	display: flex;
+  display: flex;
 }
 
 @media (min-width: 63.25em) { /* 1012px */
-	details[open] > summary:first-of-type ~ .ncn-menu-c {
-			display: none;
-	}
-	details[open].ncn-menu > summary:first-of-type:focus ~ .ncn-menu-c,
-	details[open].ncn-menu:hover > summary:first-of-type ~ .ncn-menu-c {
-			display: block;
-	}
+  details[open] > summary:first-of-type ~ .ncn-menu-c {
+    display: none;
+  }
+  details[open].ncn-menu > summary:first-of-type:focus ~ .ncn-menu-c,
+  details[open].ncn-menu:hover > summary:first-of-type ~ .ncn-menu-c {
+    display: block;
+  }
 }
 
 @media (min-width: 40em) { /* 640px */
-	.ncn .ncn-home,
-	.ncn .ncn-menu {
-			position: relative;
-			z-index: var(--ncn-zindex); /* override .d-header-wrap 1000 */
-	}
+  .ncn .ncn-home,
+  .ncn .ncn-menu {
+    position: relative;
+    z-index: var(--ncn-zindex); /* override .d-header-wrap 1000 */
+  }
 }
 
 .ncn ~ #main {
-	position: relative;
+  position: relative;
 }
 .ncn ~ #main .d-header {
-	background-color: transparent;
-	height: calc(2em + 2 * var(--ncn-menulink-pad-v));
-	margin-top: calc(-2em - 2 * var(--ncn-menulink-pad-v));
+  background-color: transparent;
+  height: calc(2em + 2 * var(--ncn-menulink-pad-v));
+  margin-top: calc(-2em - 2 * var(--ncn-menulink-pad-v));
 }
 .ncn ~ #main .d-header .title {
-	display: none;
+  display: none;
 }
 .ncn ~ #main .d-header-wrap {
-	background-color: var(--ncn-color-blue);
+  background-color: var(--ncn-color-blue);
 }
 
 /* Blue Login buttons on small screen */
 @media (max-width: 39.9375em) { /* 639px */
-	.ncn ~ #main {
-		padding-top: 0;
-	}
-	.ncn ~ #main .d-header {
-		background-color: transparent;
-		height: 4em;
-		top: 0;
-		width: 50%;
-		right: 0;
-		left: auto;
-		position: absolute;
-	}
-	.ncn ~ #main .d-header > .wrap .contents {
-		height: auto;
-	}
-	.ncn ~ #main .d-header .header-buttons {
-		margin-top: 0.8125em;
-	}
-	.ncn ~ #main .d-header .panel {
-		display: block;
-		flex-wrap: wrap;
-		flex-direction: column-reverse;
-		align-items: flex-end;
-	}
-	.ncn ~ #main .d-header .panel .menu-panel.slide-in {
-		top: 3.5em !important;
-	}
+  .ncn ~ #main {
+    padding-top: 0;
+  }
+  .ncn ~ #main .d-header {
+    background-color: transparent;
+    height: 4em;
+    top: 0;
+    width: 50%;
+    right: 0;
+    left: auto;
+    position: absolute;
+  }
+  .ncn ~ #main .d-header > .wrap .contents {
+    height: auto;
+  }
+  .ncn ~ #main .d-header .header-buttons {
+    margin-top: 0.8125em;
+  }
+  .ncn ~ #main .d-header .panel {
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .ncn ~ #main .d-header .panel .menu-panel.slide-in {
+    top: 3.5em !important;
+  }
 }
 
 /* End Netlify Community Nav Forums/Discourse specific code for common/common.scss */

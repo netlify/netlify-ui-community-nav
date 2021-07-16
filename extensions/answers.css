@@ -1,0 +1,77 @@
+/* Netlify Community Nav Forums/Discourse specific code */
+.ncn {
+	--ncn-zindex: 2000; /* override .d-header-wrap 1000 */
+}
+.ncn details {
+	position: static;
+}
+.ncn summary::before {
+	display: none;
+}
+details[open] > .ncn-submenu-c.ncn-submenu-c {
+	display: flex;
+}
+
+@media (min-width: 63.25em) { /* 1012px */
+	details[open] > summary:first-of-type ~ .ncn-menu-c {
+			display: none;
+	}
+	details[open].ncn-menu > summary:first-of-type:focus ~ .ncn-menu-c,
+	details[open].ncn-menu:hover > summary:first-of-type ~ .ncn-menu-c {
+			display: block;
+	}
+}
+
+@media (min-width: 40em) { /* 640px */
+	.ncn .ncn-home,
+	.ncn .ncn-menu {
+			position: relative;
+			z-index: 1;
+	}
+}
+
+.ncn ~ #main {
+	position: relative;
+}
+.ncn ~ #main .d-header {
+	background-color: transparent;
+	height: calc(2em + 2 * var(--ncn-menulink-pad-v));
+	margin-top: calc(-2em - 2 * var(--ncn-menulink-pad-v));
+}
+.ncn ~ #main .d-header .title {
+	display: none;
+}
+.ncn ~ #main .d-header-wrap {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+@media (min-width: 40em) { /* 640px */
+	.ncn ~ #main,
+	.ncn ~ #main .d-header-wrap {
+			position: static;
+	}
+}
+
+/* Blue Login buttons on small screen */
+@media (max-width: 37.4375em) { /* 599px */
+	.ncn ~ #main {
+		padding-top: 2em;
+	}
+	.ncn ~ #main .d-header {
+		background-color: transparent;
+		height: calc(2em + 2 * var(--ncn-menulink-pad-v));
+		margin-top: calc(-1.5em - 2 * var(--ncn-menulink-pad-v));
+	}
+	.ncn ~ #main .d-header > .wrap .contents {
+		height: auto;
+	}
+	.ncn ~ #main .d-header .header-buttons {
+		margin-top: 0.8125em;
+	}
+	.ncn ~ #main .d-header .panel {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		align-items: flex-end;
+	}
+}

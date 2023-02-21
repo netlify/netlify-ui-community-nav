@@ -134,7 +134,7 @@
 
 @media (max-width: 26.1875em) { /* 419px */
 	.ncn-home-logo {
-		min-width: 4.6875em; /* 75px /16 */
+		--ncn-pad-h: .5em;
 	}
 	.netlify-logo-full {
 		display: none;

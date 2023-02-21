@@ -53,10 +53,10 @@
 	background-color: var(--ncn-color-navy);
 	text-decoration: underline;
 }
-.ncn img,
+/* .ncn img,
 .ncn svg {
 	display: block;
-}
+} */
 .ncn-visual-hidden {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -126,6 +126,11 @@
 	--_netlify-logo-text-color: #014847;
 	--_netlify-logo-fill: #fff;
 }
+.netlify-logo-encapsulated[data-theme="monochrome-dark"] {
+	--_netlify-logo-lines-color: #0C2A2A;
+	--_netlify-logo-text-color: #0C2A2A;
+	--_netlify-logo-fill: #014847;
+  }
 
 @media (max-width: 26.1875em) { /* 419px */
 	.ncn-home-logo {

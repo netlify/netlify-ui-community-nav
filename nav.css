@@ -35,6 +35,10 @@
 	--_netlify-logo-lines-color: var(--netlify-logo-lines-color, #05bdba);
 	--_netlify-logo-text-color: var(--netlify-logo-text-color, #014847);
 }
+.netlify-logo-full[data-theme="dark"] {
+	--_netlify-logo-lines-color: #32E6E2;
+	--_netlify-logo-text-color: #ffffff;
+}
 .ncn {
 	display: flex;
 	justify-content: center;
@@ -119,7 +123,7 @@
 @media (min-width: 26.25em) { /* 420px /16 */
 	.ncn-home-logo {
 		width: auto;
-		height: 1.5625em; /* 25px /16 */
+		height: 1.875em; /* 30px /16 */
 	}
 }
 .ncn-menu {

@@ -5,12 +5,12 @@
 	--ncn-menu-pad-h: 1.9375em; /* 31px /16 */
 	--ncn-menulink-pad-v: 0.9375em; /* 15px /16 */
 
-	--ncn-color-teal: #22c3b7;
-	--ncn-color-teal-b: #489ebe;
-	--ncn-color-blue: #0f2657;
-	--ncn-color-blue-b: #146194;
-	--ncn-color-blue-c: #0b1c41;
-	--ncn-color-navy: #0c1a36;
+	--ncn-color-teal: #05bdba; /* --teal-400 */
+	--ncn-color-teal-b: #80abfa; /* --blue-400 */
+	--ncn-color-blue: #2036a1; /* --blue-800 */
+	--ncn-color-blue-b: #5d8df5; /* --blue-500 */
+	--ncn-color-blue-c: #1b205b; /* --blue-900 */
+	--ncn-color-navy: #1b205b; /* --blue-900 */
 	--ncn-color-white: #fff;
 
 	--ncn-zindex: 10;

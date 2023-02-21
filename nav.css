@@ -30,15 +30,7 @@
 		--ncn-pad-h: 1.625em; /* 26px /16 */
 		--ncn-menulink-pad-v: 1.375em; /* 22px /16 */
 	}
-}
-:where(.netlify-logo-full) {
-	--_netlify-logo-lines-color: var(--netlify-logo-lines-color, #05bdba);
-	--_netlify-logo-text-color: var(--netlify-logo-text-color, #014847);
-}
-.netlify-logo-full[data-theme="dark"] {
-	--_netlify-logo-lines-color: #32E6E2;
-	--_netlify-logo-text-color: #ffffff;
-}
+}  
 .ncn {
 	display: flex;
 	justify-content: center;
@@ -112,12 +104,38 @@
 	padding-left: var(--ncn-pad-h);
 	padding-right: var(--ncn-pad-h);
 }
+.netlify-logo-encapsulated {
+	display: none;
+}
+:where(.netlify-logo-full) {
+	--_netlify-logo-lines-color: var(--netlify-logo-lines-color, #05bdba);
+	--_netlify-logo-text-color: var(--netlify-logo-text-color, #014847);
+}
+
+.netlify-logo-full[data-theme="dark"] {
+	--_netlify-logo-lines-color: #32E6E2;
+	--_netlify-logo-text-color: #ffffff;
+}
+:where(.netlify-logo-encapsulated) {
+	--_netlify-logo-lines-color: var(--netlify-logo-lines-color, #32E6E2);
+	--_netlify-logo-text-color: var(--netlify-logo-text-color, #ffffff);
+	--_netlify-logo-fill: var(--netlify-logo-fill, #014847);
+}
+.netlify-logo-encapsulated[data-theme="dark"] {
+	--_netlify-logo-lines-color: #05BDBA;
+	--_netlify-logo-text-color: #014847;
+	--_netlify-logo-fill: #fff;
+}
+
 @media (max-width: 26.1875em) { /* 419px */
 	.ncn-home-logo {
 		min-width: 4.6875em; /* 75px /16 */
 	}
-	.ncn-home-logo-text {
+	.netlify-logo-full {
 		display: none;
+	}
+	.netlify-logo-encapsulated {
+		display: block;
 	}
 }
 @media (min-width: 26.25em) { /* 420px /16 */

@@ -31,6 +31,10 @@
 		--ncn-menulink-pad-v: 1.375em; /* 22px /16 */
 	}
 }
+:where(.netlify-logo-full) {
+	--_netlify-logo-lines-color: var(--netlify-logo-lines-color, #05bdba);
+	--_netlify-logo-text-color: var(--netlify-logo-text-color, #014847);
+}
 .ncn {
 	display: flex;
 	justify-content: center;

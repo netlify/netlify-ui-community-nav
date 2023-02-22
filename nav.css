@@ -7,10 +7,10 @@
 
 	--ncn-color-teal: #05bdba; /* --teal-400 */
 	--ncn-color-teal-b: #80abfa; /* --blue-400 */
-	--ncn-color-blue: #2036a1; /* --blue-800 */
+	--ncn-color-blue: #1B205B; /* --blue-900 */
 	--ncn-color-blue-b: #5d8df5; /* --blue-500 */
 	--ncn-color-blue-c: #1b205b; /* --blue-900 */
-	--ncn-color-navy: #1b205b; /* --blue-900 */
+	--ncn-color-neutral-dark: #060B10; /* --neutral-dark-900 */
 	--ncn-color-white: #fff;
 
 	--ncn-zindex: 10;
@@ -50,7 +50,7 @@
 }
 .ncn a[href]:focus,
 .ncn a[href]:hover {
-	background-color: var(--ncn-color-navy);
+	background-color: var(--ncn-color-neutral-dark);
 	text-decoration: underline;
 }
 /* .ncn img,
@@ -108,15 +108,17 @@
 	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, #05bdba);
 	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, #014847);
 }
-
+.ncn-home-logo-full[data-theme="dark"] {
+	--_ncn-home-logo-lines-color: #32E6E2;
+	--_ncn-home-logo-text-color: #ffffff;
+}
 :where(.ncn-home-logo-encapsulated) {
 	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, #32E6E2);
 	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, #ffffff);
 	--_netlify-logo-fill: var(--netlify-logo-fill, #014847);
 }
-.ncn-home-logo-full[data-theme="dark"] {
-	--_ncn-home-logo-lines-color: #32E6E2;
-	--_ncn-home-logo-text-color: #ffffff;
+.ncn-home-logo-encapsulated {
+	display: none;
 }
 .ncn-home-logo-encapsulated[data-theme="dark"] {
 	--_ncn-home-logo-lines-color: #05BDBA;
@@ -331,7 +333,7 @@
 	--ncn-menu-bgsize: 60%;
 	display: block;
 	padding: var(--ncn-menulink-pad-v) var(--ncn-menu-pad-h);
-	border-top: 1px solid var(--ncn-color-navy);
+	border-top: 1px solid var(--ncn-color-neutral-dark);
 	background-color: var(--ncn-color-blue);
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
@@ -340,7 +342,7 @@
 }
 .ncn-menulink:focus,
 .ncn-menulink:hover {
-	--ncn-menu-gradient: var(--ncn-color-navy) 50%;
+	--ncn-menu-gradient: var(--ncn-color-neutral-dark) 50%;
 	background-image: linear-gradient(to right, var(--ncn-menu-gradient), transparent), var(--ncn-menu-img);
 }
 .ncn-ctm .ncn-menu-c:after {

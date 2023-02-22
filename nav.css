@@ -111,8 +111,6 @@
 	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, var(--ncn-color-teal-b));
 	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, var(--ncn-color-white));
 	--_netlify-logo-fill: var(--netlify-logo-fill, var(--ncn-color-teal-c));
-}
-.ncn-home-logo-encapsulated {
 	display: none;
 }
 .ncn-home-logo-encapsulated[data-theme="dark"] {

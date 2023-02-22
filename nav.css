@@ -6,10 +6,11 @@
 	--ncn-menulink-pad-v: 0.9375em; /* 15px /16 */
 
 	--ncn-color-teal: #05bdba; /* --teal-400 */
-	--ncn-color-teal-b: #80abfa; /* --blue-400 */
-	--ncn-color-blue: #1B205B; /* --blue-900 */
+	--ncn-color-teal-b: #32E6E2; /* --teal-200 */
+	--ncn-color-teal-c: #014847; /* --teal-800 */
+	--ncn-color-blue: #1b205b; /* --blue-900 */
 	--ncn-color-blue-b: #5d8df5; /* --blue-500 */
-	--ncn-color-blue-c: #1b205b; /* --blue-900 */
+	--ncn-color-blue-c: #80abfa; /* --blue-400 */
 	--ncn-color-neutral-dark: #060B10; /* --neutral-dark-900 */
 	--ncn-color-white: #fff;
 
@@ -17,12 +18,6 @@
 	--ncn-maxwidth: 70em; /* 1120px /16 */
 	--ncn-weight: 600;
 	--ncn-shadow: -10px 10px 80px rgba(0, 0, 0, .1);
-
-	--ncn-menu-img-community: url(https://netlify-ui-community-nav.netlify.app/assets/community.jpg);
-	--ncn-menu-img-swag: url(https://netlify-ui-community-nav.netlify.app/assets/swag.jpg);
-	--ncn-menu-img-forums: url(https://netlify-ui-community-nav.netlify.app/assets/answers.jpg);
-	--ncn-menu-img-podcast: url(https://netlify-ui-community-nav.netlify.app/assets/podcast.jpg);
-	--ncn-menu-img-explorers: url(https://netlify-ui-community-nav.netlify.app/assets/explorers.jpg);
 }
 @media (min-width: 40em) { /* 640px */
 	:root {
@@ -105,25 +100,25 @@
 	padding-right: var(--ncn-pad-h);
 }
 :where(.ncn-home-logo-full) {
-	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, #05bdba);
-	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, #014847);
+	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, var(--ncn-color-teal));
+	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, var(--ncn-color-teal-c));
 }
 .ncn-home-logo-full[data-theme="dark"] {
-	--_ncn-home-logo-lines-color: #32E6E2;
-	--_ncn-home-logo-text-color: #ffffff;
+	--_ncn-home-logo-lines-color: var(--ncn-color-teal-b);
+	--_ncn-home-logo-text-color: var(--ncn-color-white);
 }
 :where(.ncn-home-logo-encapsulated) {
-	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, #32E6E2);
-	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, #ffffff);
-	--_netlify-logo-fill: var(--netlify-logo-fill, #014847);
+	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, var(--ncn-color-teal-b));
+	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, var(--ncn-color-white));
+	--_netlify-logo-fill: var(--netlify-logo-fill, var(--ncn-color-teal-c));
 }
 .ncn-home-logo-encapsulated {
 	display: none;
 }
 .ncn-home-logo-encapsulated[data-theme="dark"] {
-	--_ncn-home-logo-lines-color: #05BDBA;
-	--_ncn-home-logo-text-color: #014847;
-	--_netlify-logo-fill: #fff;
+	--_ncn-home-logo-lines-color: var(--ncn-color-teal);
+	--_ncn-home-logo-text-color: var(--ncn-color-teal-c);
+	--_netlify-logo-fill: var(--ncn-color-white);
 }
 @media (max-width: 26.1875em) { /* 419px */
 	.ncn-home-logo {
@@ -163,7 +158,7 @@
 }
 .ncn-menu[open] > .ncn-menu-hed,
 .ncn-menu .ncn-menu-hed:hover {
-	background: var(--ncn-color-blue-c);
+	background: var(--ncn-color-blue);
 }
 .ncn-menu-hed:before {
 	content: "";
@@ -310,7 +305,7 @@
 	}
 }
 .ncn-submenu .ncn-submenu-hed:hover {
-	background-color: var(--ncn-color-blue-c);
+	background-color: var(--ncn-color-blue);
 }
 @media (max-width: 63.1875em) { /* 1011px */
 	.ncn-submenu-c {
@@ -353,27 +348,7 @@
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
-	background-image: var(--ncn-menu-img-community), var(--ncn-menu-img-swag), var(--ncn-menu-img-forums), var(--ncn-menu-img-explorers), var(--ncn-menu-img-podcast);
 }
-.ncn-menulink-community {
-	--ncn-menu-img: var(--ncn-menu-img-community);
-}
-.ncn-menulink-swag {
-	--ncn-menu-img: var(--ncn-menu-img-swag);
-}
-.ncn-menulink-forums {
-	--ncn-menu-img: var(--ncn-menu-img-forums);
-	--ncn-menu-bgsize: 100%;
-}
-.ncn-menulink-explorers {
-	--ncn-menu-img: var(--ncn-menu-img-explorers);
-	--ncn-menu-bgsize: 80%;
-}
-.ncn-menulink-podcast {
-	--ncn-menu-img: var(--ncn-menu-img-podcast);
-	--ncn-menu-bgsize: 80%;
-}
-
 /* Submenu Links */
 .ncn-submenulink {
 	padding: var(--ncn-menulink-pad-v) var(--ncn-menu-pad-h);

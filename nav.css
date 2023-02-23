@@ -1,28 +1,23 @@
-/* Netlify Community Nav, v1.0.10 */
+/* Netlify Community Nav, v1.1.0 */
 :root {
 	--ncn-min-h: 3.4375em; /* 55px /16 */
 	--ncn-pad-h: 0.9375em; /* 15px /16 */
 	--ncn-menu-pad-h: 1.9375em; /* 31px /16 */
 	--ncn-menulink-pad-v: 0.9375em; /* 15px /16 */
 
-	--ncn-color-teal: #22c3b7;
-	--ncn-color-teal-b: #489ebe;
-	--ncn-color-blue: #0f2657;
-	--ncn-color-blue-b: #146194;
-	--ncn-color-blue-c: #0b1c41;
-	--ncn-color-navy: #0c1a36;
+	--ncn-color-teal: #05bdba; /* --teal-400 */
+	--ncn-color-teal-b: #32E6E2; /* --teal-200 */
+	--ncn-color-teal-c: #014847; /* --teal-800 */
+	--ncn-color-blue: #1b205b; /* --blue-900 */
+	--ncn-color-blue-b: #5d8df5; /* --blue-500 */
+	--ncn-color-blue-c: #80abfa; /* --blue-400 */
+	--ncn-color-neutral-dark: #060B10; /* --neutral-dark-900 */
 	--ncn-color-white: #fff;
 
 	--ncn-zindex: 10;
 	--ncn-maxwidth: 70em; /* 1120px /16 */
 	--ncn-weight: 600;
 	--ncn-shadow: -10px 10px 80px rgba(0, 0, 0, .1);
-
-	--ncn-menu-img-community: url(https://netlify-ui-community-nav.netlify.app/assets/community.jpg);
-	--ncn-menu-img-swag: url(https://netlify-ui-community-nav.netlify.app/assets/swag.jpg);
-	--ncn-menu-img-forums: url(https://netlify-ui-community-nav.netlify.app/assets/answers.jpg);
-	--ncn-menu-img-podcast: url(https://netlify-ui-community-nav.netlify.app/assets/podcast.jpg);
-	--ncn-menu-img-explorers: url(https://netlify-ui-community-nav.netlify.app/assets/explorers.jpg);
 }
 @media (min-width: 40em) { /* 640px */
 	:root {
@@ -30,7 +25,7 @@
 		--ncn-pad-h: 1.625em; /* 26px /16 */
 		--ncn-menulink-pad-v: 1.375em; /* 22px /16 */
 	}
-}
+}  
 .ncn {
 	display: flex;
 	justify-content: center;
@@ -47,16 +42,17 @@
 .ncn a[href] {
 	color: inherit;
 	text-decoration: none;
+	outline-offset: -2px;
 }
 .ncn a[href]:focus,
 .ncn a[href]:hover {
-	background-color: var(--ncn-color-navy);
+	background-color: var(--ncn-color-neutral-dark);
 	text-decoration: underline;
 }
-.ncn img,
+/* .ncn img,
 .ncn svg {
 	display: block;
-}
+} */
 .ncn-visual-hidden {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -104,18 +100,38 @@
 	padding-left: var(--ncn-pad-h);
 	padding-right: var(--ncn-pad-h);
 }
+:where(.ncn-home-logo-full) {
+	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, var(--ncn-color-teal));
+	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, var(--ncn-color-teal-c));
+}
+.ncn-home-logo-full[data-theme="dark"] {
+	--_ncn-home-logo-lines-color: var(--ncn-color-teal-b);
+	--_ncn-home-logo-text-color: var(--ncn-color-white);
+}
+:where(.ncn-home-logo-monogram) {
+  --_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, var(--ncn-color-teal));
+  --_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, var(--ncn-color-teal-c));
+  display: none;
+}
+.ncn-home-logo-monogram[data-theme="dark"] {
+  --_ncn-home-logo-lines-color: var(--ncn-color-teal-b);
+  --_ncn-home-logo-text-color: var(--ncn-color-white);
+}
 @media (max-width: 26.1875em) { /* 419px */
 	.ncn-home-logo {
-		min-width: 4.6875em; /* 75px /16 */
+		--ncn-pad-h: .5em;
 	}
-	.ncn-home-logo-text {
+	.ncn-home-logo-full {
 		display: none;
+	}
+	.ncn-home-logo-monogram {
+		display: block;
 	}
 }
 @media (min-width: 26.25em) { /* 420px /16 */
 	.ncn-home-logo {
 		width: auto;
-		height: 1.5625em; /* 25px /16 */
+		height: 2.375em; /* 38px /16 */
 	}
 }
 .ncn-menu {
@@ -139,7 +155,7 @@
 }
 .ncn-menu[open] > .ncn-menu-hed,
 .ncn-menu .ncn-menu-hed:hover {
-	background: var(--ncn-color-blue-c);
+	background: var(--ncn-color-blue);
 }
 .ncn-menu-hed:before {
 	content: "";
@@ -286,7 +302,7 @@
 	}
 }
 .ncn-submenu .ncn-submenu-hed:hover {
-	background-color: var(--ncn-color-blue-c);
+	background-color: var(--ncn-color-blue);
 }
 @media (max-width: 63.1875em) { /* 1011px */
 	.ncn-submenu-c {
@@ -309,7 +325,7 @@
 	--ncn-menu-bgsize: 60%;
 	display: block;
 	padding: var(--ncn-menulink-pad-v) var(--ncn-menu-pad-h);
-	border-top: 1px solid var(--ncn-color-navy);
+	border-top: 1px solid var(--ncn-color-neutral-dark);
 	background-color: var(--ncn-color-blue);
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
@@ -318,7 +334,7 @@
 }
 .ncn-menulink:focus,
 .ncn-menulink:hover {
-	--ncn-menu-gradient: var(--ncn-color-navy) 50%;
+	--ncn-menu-gradient: var(--ncn-color-neutral-dark) 50%;
 	background-image: linear-gradient(to right, var(--ncn-menu-gradient), transparent), var(--ncn-menu-img);
 }
 .ncn-ctm .ncn-menu-c:after {
@@ -329,27 +345,7 @@
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
-	background-image: var(--ncn-menu-img-community), var(--ncn-menu-img-swag), var(--ncn-menu-img-forums), var(--ncn-menu-img-explorers), var(--ncn-menu-img-podcast);
 }
-.ncn-menulink-community {
-	--ncn-menu-img: var(--ncn-menu-img-community);
-}
-.ncn-menulink-swag {
-	--ncn-menu-img: var(--ncn-menu-img-swag);
-}
-.ncn-menulink-forums {
-	--ncn-menu-img: var(--ncn-menu-img-forums);
-	--ncn-menu-bgsize: 100%;
-}
-.ncn-menulink-explorers {
-	--ncn-menu-img: var(--ncn-menu-img-explorers);
-	--ncn-menu-bgsize: 80%;
-}
-.ncn-menulink-podcast {
-	--ncn-menu-img: var(--ncn-menu-img-podcast);
-	--ncn-menu-bgsize: 80%;
-}
-
 /* Submenu Links */
 .ncn-submenulink {
 	padding: var(--ncn-menulink-pad-v) var(--ncn-menu-pad-h);

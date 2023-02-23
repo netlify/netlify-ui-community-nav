@@ -42,6 +42,7 @@
 .ncn a[href] {
 	color: inherit;
 	text-decoration: none;
+	outline-offset: -2px;
 }
 .ncn a[href]:focus,
 .ncn a[href]:hover {

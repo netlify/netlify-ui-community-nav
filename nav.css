@@ -108,16 +108,14 @@
 	--_ncn-home-logo-lines-color: var(--ncn-color-teal-b);
 	--_ncn-home-logo-text-color: var(--ncn-color-white);
 }
-:where(.ncn-home-logo-encapsulated) {
-	--_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, var(--ncn-color-teal-b));
-	--_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, var(--ncn-color-white));
-	--_netlify-logo-fill: var(--netlify-logo-fill, var(--ncn-color-teal-c));
-	display: none;
+:where(.ncn-home-logo-monogram) {
+  --_ncn-home-logo-lines-color: var(--ncn-home-logo-lines-color, var(--ncn-color-teal));
+  --_ncn-home-logo-text-color: var(--ncn-home-logo-text-color, var(--ncn-color-teal-c));
+  display: none;
 }
-.ncn-home-logo-encapsulated[data-theme="dark"] {
-	--_ncn-home-logo-lines-color: var(--ncn-color-teal);
-	--_ncn-home-logo-text-color: var(--ncn-color-teal-c);
-	--_netlify-logo-fill: var(--ncn-color-white);
+.ncn-home-logo-monogram[data-theme="dark"] {
+  --_ncn-home-logo-lines-color: var(--ncn-color-teal-b);
+  --_ncn-home-logo-text-color: var(--ncn-color-white);
 }
 @media (max-width: 26.1875em) { /* 419px */
 	.ncn-home-logo {
@@ -126,7 +124,7 @@
 	.ncn-home-logo-full {
 		display: none;
 	}
-	.ncn-home-logo-encapsulated {
+	.ncn-home-logo-monogram {
 		display: block;
 	}
 }

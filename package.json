@@ -1,6 +1,6 @@
 {
   "name": "@netlify/marketing-community-nav",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A web component for shared navigation on Community, Forums, Answers, Podcasts, Swag, and others.",
   "dependencies": {},
   "scripts": {},
